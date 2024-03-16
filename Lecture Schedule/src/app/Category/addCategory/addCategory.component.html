@@ -1,0 +1,17 @@
+<div class="p-3 form-group d-flex justify-content-center mt-5" style="
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.12);
+  ">
+  <form (submit)="addCategory()" [formGroup]="myForm" class="w-100" style="overflow: hidden;">
+    <div>
+      <label for="categoryName">Category Name</label>
+      <input class="form-control form" type="text" formControlName="categoryName" placeholder="Category Name" />
+    </div>
+    <div class="my-3">
+      <input type="file" class="btn btn-light" (change)="onFileChange($event)" name="categoryImage" />
+    </div>
+    <div class="button">
+      <button type="submit " class="btn btn-light">Add Category</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,11 @@
+{
+  "production": "${production}",
+  "environmentName": "${environmentName}",
+  "apiConfig": {
+    "apiUrl": "${apiConfig_apiUrl}",
+    "uiUrl": "${apiConfig_uiUrl}",
+    "adminUiUrl": "${apiConfig_adminUiUrl}",
+    "apiVersion": "${apiConfig_apiVersion}"
+  }
+}
+

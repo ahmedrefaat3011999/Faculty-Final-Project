@@ -1,0 +1,10 @@
+::ng-deep #answer > div.ck.ck-reset.ck-editor.ck-rounded-corners > div.ck.ck-editor__main > div{
+    min-height: 200px;
+}
+::ng-deep #answer > div.ck.ck-reset.ck-editor.ck-rounded-corners > div.ck.ck-editor__main > div > h2,
+::ng-deep #answer > div.ck.ck-reset.ck-editor.ck-rounded-corners > div.ck.ck-editor__main > div > h3,
+::ng-deep #answer > div.ck.ck-reset.ck-editor.ck-rounded-corners > div.ck.ck-editor__main > div > h4,
+::ng-deep #answer > div.ck.ck-reset.ck-editor.ck-rounded-corners > div.ck.ck-editor__main > div > h5
+{
+    color: black;
+}

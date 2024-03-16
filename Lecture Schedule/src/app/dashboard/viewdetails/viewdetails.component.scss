@@ -1,0 +1,36 @@
+div {
+    margin-bottom: 10px;
+  }
+
+  .user-form {
+    width: 100%; /* Set the form width to 100% of its container */
+}
+
+.user-form div {
+    margin-bottom: 15px; /* Add some margin between form elements */
+}
+
+.user-form label {
+    display: inline-block;
+    width: 140px; /* Adjust the label width as needed */
+    margin-right: 10px;
+}
+
+.user-form input {
+    width: calc(100% - 140px); /* Adjust the input width based on the label width and margin */
+    padding: 5px; /* Add padding to the input for better appearance */
+}
+
+
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+    margin-top: 3%;
+  }
+
+  .butt {
+    padding: 10px 20px;
+    margin: 0 10px;
+  }

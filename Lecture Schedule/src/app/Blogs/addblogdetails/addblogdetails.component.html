@@ -1,0 +1,107 @@
+<br />
+<br />
+<div class="ps-3">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb mb-0 p-0">
+      <li class="breadcrumb-item">
+        <a (click)="$event.preventDefault()"><i class="bi bi-grid"></i></a>
+        Blogs
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">Details</li>
+    </ol>
+  </nav>
+</div>
+<!-- <section>
+    <div class="text-black" style="border-radius: 25px">
+        <div class="row justify-content-center">
+          <div class="col-md-12 col-lg-12 col-xl-8 order-2 order-lg-1">
+            <p class="text-center ff-secondary h1 fw-bold mb-5 mx-1 mx-md-4 mt-4 sign">
+             
+            </p>
+            <form class="mx-1 mx-md-4 w-100">
+     
+<div class="row">
+  <label class="col-6" for="title" style="font-weight: bolder; margin-bottom: 20px; ; ">Main Photo</label>
+
+  <label class="col-6" for="title" style="font-weight: bolder; margin-bottom: 20px; ; ">Detail Photo</label>
+
+</div>
+
+<div class="row">
+  <div class="mb-4 col-6">  <img style="width:40% ;"  [src]="blog?.mainPhoto ? blog?.mainPhoto?.imgUrl : ''">
+  </div>
+<div  class="mb-4 col-6">  <img style="width:40%;" [src]="blog?.detailPhoto ? blog?.detailPhoto?.imgUrl :''">
+</div>
+
+</div>
+
+              
+              
+        <label for="title" class="h5 mt-4"  style="font-weight: bolder; margin-bottom: 20px; ; ">Title :</label>
+
+
+            <div class="row">
+              {{blog?.title}}
+            </div>
+
+            <label  class="h5 mt-4"  style="font-weight: bolder; margin-bottom: 20px; ; ">Description :</label>
+
+            <div class="row">
+              {{blog?.description}}
+            </div>
+            <label  class="h5 mt-4"  style="font-weight: bolder; margin-bottom: 20px; ; ">Details :</label>
+
+            <div class="row" [innerHTML]="blog?.detail" style="color: black;border-width: 5px; border-color: black;" >
+            
+            </div>
+                     
+              </form>
+          </div>
+        </div>
+      </div>
+</section> -->
+
+<div class="card p-5 w-75 m-auto my-3">
+  <div class="row d-flex justify-content-between align-items-center ">
+    <div class="mb-4 col-md-6 col-sm-12  d-flex justify-content-center align-items-center flex-column">
+      <h6 style="font-weight: bolder; margin-bottom: 20px">Main Photo</h6>
+      <img
+        style="width: 140px ;height: 140px;"
+        [src]="blog?.mainPhoto ? blog?.mainPhoto?.imgUrl : ''"
+      />
+    </div>
+    <div class="mb-4 col-md-6 col-sm-12  d-flex justify-content-center align-items-center flex-column">
+      <h6 style="font-weight: bolder; margin-bottom: 20px">Detail Photo</h6>
+      <img
+      style="width: 140px; height: 140px;"
+      [src]="blog?.detailPhoto ? blog?.detailPhoto?.imgUrl : ''"
+      />
+    </div>
+  </div>
+<hr>
+    <div class="card-body">
+      <div class="my-2">
+        <h4 class="card-title  " style="font-weight: bolder; margin-bottom: 20px ">title</h4>
+        <p class="card-text  text-break">
+          {{ blog?.title }}
+        </p>
+      </div>
+      <div class="my-2">
+        <h4 class="card-Discription" style="font-weight: bolder; margin-bottom: 20px">Discription</h4>
+        <p class="card-text  text-break">
+          {{ blog?.description }}
+        </p>
+      </div>
+      <div class="my-2">
+        <h4 class="h5 mt-4" style="font-weight: bolder; margin-bottom: 20px">
+          Details :
+        </h4>
+
+        <div
+          class="row text-break"
+          [innerHTML]="blog?.detail"
+          style=" border-width: 5px; border-color: black"
+        ></div>
+      </div>
+    </div>
+</div>

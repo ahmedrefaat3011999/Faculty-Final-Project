@@ -1,0 +1,19 @@
+<div
+  class="p-3 form-group d-flex justify-content-center mt-5"
+  style="
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.12);
+  "
+>
+  <form [formGroup]="myForm" (ngSubmit)="addSubCategory()"class="w-100">
+    <label for="name">Name:</label>
+    <input
+      class="form-control form mb-2"
+      type="text"
+      id="name"
+      formControlName="name"
+    />
+
+    <button class="btn btn-light" type="submit">Submit</button>
+  </form>
+</div>

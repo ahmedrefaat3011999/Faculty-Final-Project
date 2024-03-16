@@ -1,0 +1,84 @@
+<div class="card my5" style="margin-top: 50px">
+  <div class="card-body container mt-5">
+    <h2 class="text-center">Add Your Reply</h2>
+
+    <div class=" ">
+     <!-- <div>
+      <div class="user text-start d-flex justify-content-start">
+        <img
+          src="assets/images2/user_Image.png"
+          width="25px"
+          height="25px"
+          alt=""
+        />
+        <h5 class="text-black mx-2">Ahmed Refaat</h5>
+        <div class="d-flex flex-column " dir="rtl">
+          <p class="text-black"><strong class="text-primary">Subject</strong> {{subject}}</p>
+          <p class="text-black"><strong class="text-primary">Question</strong>{{Question}} </p>
+        </div>
+        
+    </div>
+      <div class="admin text-end d-flex justify-content-end  mt-4">
+        <div class="d-flex flex-column " dir="rtl">
+          <p class="text-black"><strong class="text-primary answer">Answer</strong> {{ Reply }} </p>
+        </div>
+        <div class="d-flex">
+          <h5 class="text-black mx-2">Ahmed Refaat</h5>
+          <img
+            src="assets/images2/user_Image.png"
+            width="25px"
+            height="25px"
+            alt=""
+          />
+        </div>
+      </div> -->
+      
+      
+     </div>
+    <form
+      [formGroup]="complaintForm"
+      class="needs-validation"
+    >
+      <!-- <div class="mb-3">
+          <label for="subject" class="form-label">subject:</label>
+          <input type="text" id="subject" class="form-control" formControlName="subject" required>
+          <div class="invalid-feedback" [class.d-block]="complaintForm.get('subject').invalid && complaintForm.get('subject').touched">
+            Subject is required.
+          </div>
+        </div> -->
+
+      <div class="mb-3">
+        <label for="reply" class="form-label">reply:</label>
+        <textarea
+          id="reply"
+          class="form-control"
+          formControlName="reply"
+          required
+          placeholder="Write Your Answer"
+        ></textarea>
+
+        <div
+          class="invalid-feedback"
+          [class.d-block]="
+            complaintForm.get('reply').invalid &&
+            complaintForm.get('reply').touched
+          "
+        >
+          Reply is required.
+        </div>
+        <input type="file"   value="upload">
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center">
+        <button
+          type="submit"
+          class="btn btn-success"
+          [disabled]="complaintForm.invalid"
+        >
+          Submit
+        </button>
+        <!-- <button type="button" routerLink="/ticketSupport/all_comlaints" class="btn btn-primary">All Complaints</button> -->
+      </div>
+    </form>
+  </div>
+</div>

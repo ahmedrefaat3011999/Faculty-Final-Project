@@ -1,0 +1,48 @@
+
+
+.user-form {
+   
+}
+
+.user-form div {
+    margin-bottom: 15px; 
+    
+}
+
+.user-form label {
+    display: inline-block;
+    width: 140px; 
+    margin-right: 10px;
+}
+
+.user-form input {
+    width: calc(100%); 
+    padding: 5px;
+}
+
+
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+    margin-top: 3%;
+  }
+.user-detailsBox{
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, 0.12);
+  word-wrap: break-word;
+  border-radius: 0.25rem;
+}
+  .butt {
+    padding: 10px 20px;
+    // margin: 0 10px;
+    border: hsla(0, 0%, 0%, 0);
+    color:white;
+    border-radius: 40px;
+  }
+
+
+
+
+

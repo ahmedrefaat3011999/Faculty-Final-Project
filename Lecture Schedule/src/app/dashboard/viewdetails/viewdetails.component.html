@@ -1,0 +1,48 @@
+<div class="row">
+
+    <div class="col-8">
+      <h2>User Details</h2>
+    </div>
+  
+    <div class="col-3">  
+      <input 
+      routerLink="/dashboard/eCommerce"
+        type="button"
+        class="btn btn-light "
+        style="margin-left: 30%;"
+        value="Search again">
+    </div>
+  
+  </div>
+  <form class="user-form">
+    <div>
+        <label>Name:</label>
+        <input type="text" formControlName="name" value="{{ user?.name }}" disabled>
+    </div>
+    <div>
+        <label>Email:</label>
+        <input type="email" formControlName="email" value="{{ user?.email }}" disabled>
+    </div>
+    <div>
+        <label>Country:</label>
+        <input type="text" formControlName="country" value="{{ user?.country }}" disabled>
+    </div>
+    <div>
+        <label>Created Date:</label>
+        <input type="text" formControlName="createdDate" value="{{ user?.createdDate.substring(0, 10) }}" disabled>
+    </div>
+    <div>
+        <label>Deleted By:</label>
+        <input type="text" formControlName="deletedBy" value="{{ user?.deletedBy }}" disabled>
+    </div>
+    <div>
+        <label>Status:</label>
+        <input type="text" formControlName="status" value="{{ user?.status }}" disabled>
+    </div>
+</form>
+<div class="centered-container">
+    <input (click)="Delete()" type="button" class="butt btn btn-light mb-3 mb-lg-0" value="Delete">
+    <input *ngIf="user?.status!='Blocked'" (click)="Block()" type="button" class="butt btn btn-light mb-3 mb-lg-0"  value="Block">
+    <input *ngIf="user?.status=='Blocked'" (click)="UnBlock()" type="button" class="butt btn btn-light mb-3 mb-lg-0"  value="Unblock">
+
+  </div>

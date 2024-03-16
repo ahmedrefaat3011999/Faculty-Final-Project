@@ -1,0 +1,120 @@
+<div class="">
+  <h1 class="text-center ff-secondary Logos">
+    Blogs Data
+    <!-- <div
+      routerLink="/blogs/addmainblog"
+      class="btn btn-light m-2"
+      style="align-items: center"
+    >
+      Add Blog
+    </div> -->
+  </h1>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="table-responsive ">
+        <table class="table table-hover table-bordered">
+          <thead class="text-center">
+            <tr class="align-middle">
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Short description</th>
+              <th scope="col">Main Photo</th>
+              <th scope="col">Details Photo</th>
+
+              <th scope="col">Actions</th>
+              <!-- New column for icons -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              *ngFor="let item of blogs; let i = index"
+              class="align-middle text-center"
+            >
+              <th scope="row">{{ i + 1 }}</th>
+              <td class="text-break">{{ item?.title }}</td>
+              <td class="text-break">{{ item?.description }}</td>
+              <td>
+                <label
+                  class="custom-file-upload"
+                  *ngIf="item?.mainImageUrl == null"
+                >
+                  <input
+                    (change)="handleImageUpload($event, item?.blogId, 'main')"
+                    accept="image/*"
+                    type="file"
+                  />
+                  Upload
+                </label>
+                <div *ngIf="item?.mainImageUrl !== ''">
+                  <img style="max-width: 110px" [src]="item?.mainImageUrl" />
+                </div>
+              </td>
+              <td>
+                <label
+                  class="custom-file-upload"
+                  *ngIf="item?.detailImageUrl == null"
+                >
+                  <input
+                    (change)="handleImageUpload($event, item?.blogId, 'detail')"
+                    accept="image/*"
+                    type="file"
+                  />
+                  Upload
+                </label>
+                <div *ngIf="item?.detailImageUrl !== ''">
+                  <img style="max-width: 110px" [src]="item?.detailImageUrl" />
+                </div>
+              </td>
+              <td>
+                <div
+                  class="icons d-flex justify-content-center align-items-center"
+                >
+                  <div style="margin-top: 35px;" >
+                    <button class="btn btn-light ms-2 my-1">
+                      <i
+                        style="cursor: pointer"
+                        (click)="publish(item.blogId)"
+                        class="fs-4 m-2 fa fa-regular fa-circle"
+                        [style]="{ color: item.isPublished ? 'green' : 'red' }"
+                      ></i>
+                    </button>
+                    <div>
+                      <p *ngIf="item.isPublished">published</p>
+                      <p *ngIf="!item.isPublished" class="font-size-sm">Un Published</p>
+                    </div>
+                  </div>
+                  <button class="btn btn-light ms-2" >
+                    <i 
+                      style="color: #eef1f5; cursor: pointer"
+                      [routerLink]="['/blogs/blogDetails/', item?.blogId]"
+                      routerLinkActive="router-link-active"
+                      class="bi fs-4 m-2 fa fa-regular fa-eye"
+                    ></i>
+                  </button>
+                  <button class="btn btn-light ms-2">
+                    <i
+                      style="cursor: pointer"
+                      class="bi fs-4 m-2 fa fa-solid fa-pencil"
+                      [routerLink]="['/blogs/addmainblog/', item?.blogId]"
+
+                      routerLinkActive="router-link-active"
+
+                    ></i>
+                  </button>
+                  <button class="btn btn-light ms-2">
+                    <i
+                      style="cursor: pointer"
+                      class="bi fs-4 m-2 fa bx bx-trash me-0 text-center align-midle"
+                      (click)="delete(item.blogId)"
+                    ></i>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

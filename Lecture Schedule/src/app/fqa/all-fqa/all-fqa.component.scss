@@ -1,0 +1,11 @@
+.link-add{
+    border: 2px solid transparent;
+    transition: .3s;
+    font-size: 20px;
+}
+.link-add:hover{
+    border: 2px solid white !important ;
+    transition: .3s;
+    border-radius: 10px;
+    background-color: rgba(240, 248, 255, 0.123);
+}
