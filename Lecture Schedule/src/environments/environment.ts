@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: "https://workneeing-back-end.workneering.com/api/v1",
+  apiUrl: "",
   // clientId:"983614428863-2ecd6psvtap9uouv8dsvttkkj97ig7jf.apps.googleusercontent.com"
 };
 

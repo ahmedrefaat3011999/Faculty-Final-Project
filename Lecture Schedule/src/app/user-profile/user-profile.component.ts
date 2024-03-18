@@ -13,20 +13,20 @@ export class UserProfileComponent implements OnInit {
   constructor(private httpserv: HttpService, private authserv: AuthService) {}
 
   ngOnInit(): void {
-    this.getAdminData()
+    // this.getAdminData()
   }
 
-  getAdminData() {
-    this.httpserv.GET(`Admin`).subscribe((res) => {
-      this.arr=res;
-      this.arr = {
-        role: 1,
-        name: 'string',
-        email: 'string',
-        password: 'string',
-      };
-console.log('this is res data '+this.arr);
-console.log('this is res data '+res);
-    });
-  }
+//   getAdminData() {
+//     this.httpserv.GET(`Admin`).subscribe((res) => {
+//       this.arr=res;
+//       this.arr = {
+//         role: 1,
+//         name: 'string',
+//         email: 'string',
+//         password: 'string',
+//       };
+// console.log('this is res data '+this.arr);
+// console.log('this is res data '+res);
+//     });
+//   }
 }

@@ -2,7 +2,7 @@
   "production": false,
   "environmentName": "Local",
   "apiConfig": {
-    "apiUrl": "https://workneeing-back-end.workneering.com",
+    "apiUrl": "",
     "apiVersion": 1
   }
 }

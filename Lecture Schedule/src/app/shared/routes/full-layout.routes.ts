@@ -50,14 +50,7 @@ export const Full_ROUTES: Routes = [
     loadChildren: () =>
       import('../../Teachers/Teachers.module').then((m) => m.TeacherModule),
   },
-  // {
-  //     path: 'blogs',
-  //     loadChildren: () => import('../../Blogs/blogs.module').then(m => m.BlogsModule)
-  // },
-  // {
-  //     path: 'UserServices',
-  //     loadChildren: () => import('../../UserServices/Services.module').then(m => m.BlogsModule)
-  // },
+ 
   {
     path: 'ticketSupport',
     loadChildren: () =>
@@ -65,18 +58,7 @@ export const Full_ROUTES: Routes = [
         (m) => m.ticketSupportModule
       ),
   },
-  // {
-  //     path: 'Category',
-  //     loadChildren: () => import('../../Category/Category.module').then(m => m.CategoryModule)
-  // },
-  // {
-  //     path: 'HomeBoxes',
-  //     loadChildren: () => import('../../HomeBoxes/HomeBoxes.module').then(m => m.HomeBoxesModule)
-  // },
-  // {
-  //     path: 'HomeLogo',
-  //     loadChildren: () => import('../../HomeLogo/HomeLogo.module').then(m => m.HomeLogoModule)
-  // },
+ 
 
   {
     path: 'fqas',

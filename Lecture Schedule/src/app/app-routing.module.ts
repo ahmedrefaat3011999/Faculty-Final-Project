@@ -9,12 +9,11 @@ import { CONTENT_ROUTES } from './shared/routes/content-layout.routes';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'auth/sign-in',
-
-    pathMatch: 'full',
-  },
+  // {
+  //   path: '',
+  //   redirectTo: 'auth/sign-in',
+  //   pathMatch: 'full',
+  // },
   {
     path: '',
     redirectTo: 'dashboard/default',
